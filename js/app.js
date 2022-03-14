@@ -1,20 +1,7 @@
+const title = document.querySelectorAll('.hello h1');
 
-function plus(firstNumber,secondNumber){
-  console.log(firstNumber+secondNumber)
-}
-function divide(firstNumber,secondNumber){
-  console.log(firstNumber/secondNumber)
-}
-plus(60,10)
-divide(60,10)
+// console.dir(title)
 
-const calculate ={
-  plus:function(firstNumber,secondNumber){
-    console.log(firstNumber+secondNumber)
-  },
-  divide:function(firstNumber,secondNumber){
-    console.log(firstNumber/secondNumber)
-  },
-};
-let a = calculate.plus
-a(1,4)
+title.innerText = 'hello';
+
+

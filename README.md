@@ -10,7 +10,7 @@ MOMENTOM 랜딩 페이지(홈페이지)를 만드는 예제입니다.<br>
 
 <br/>
 
-![MOMVENTOM]()
+![MOMVENTOM](https://github.com/ohtaekwon/MOMENTUM/blob/master/_asset/bg1.png?raw=true)
 
 
 ## three.js

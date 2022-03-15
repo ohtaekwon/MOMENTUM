@@ -29,20 +29,21 @@ function paintGreetings(username){
   greeting.innerText = `Hello ${username}`
   greeting.classList.remove(HIDDEN_CLASSNAME)  
 }
-loginFormEl.addEventListener('submit',onLoginSubmit)
 
 // local stroage에서 username key를 찾고 그것을 savedUsername에 할당한다.
 const savedUsername = localStorage.getItem(USERNAME_KEY)
-console.log(savedUsername)
+// console.log(savedUsername)
 
 // username이 없다면
 if (savedUsername===null){
   // show the form
-  // form을 보여주고
+  // loginFormEl에서 'hidden'이라는 클래스명을 제거한다.
   loginFormEl.classList.remove(HIDDEN_CLASSNAME)
+  // 그리고 나서, 추가한 addEventListener가 submit을 기다린다.
+  // 유저명을 입력하고 login버튼을 눌러서 onLoginSubmit함수를 실행
   loginFormEl.addEventListener('submit',onLoginSubmit)
 } else {
-  // username이 있다면,
   // show the greetings
+  // username이 있다면,paintGreetings 함수를 실행한다.
   paintGreetings(savedUsername)
 }

@@ -32,7 +32,7 @@ function paintGreetings(username){
 
 // local stroage에서 username key를 찾고 그것을 savedUsername에 할당한다.
 const savedUsername = localStorage.getItem(USERNAME_KEY)
-// console.log(savedUsername)
+console.log(savedUsername)
 
 // username이 없다면
 if (savedUsername===null){

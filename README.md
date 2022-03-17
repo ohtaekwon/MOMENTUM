@@ -32,7 +32,9 @@ function handleH1Click(){
 
 ```
 
-## [toggle](https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/toggle)
+## toggle
+
+##### [toggle 더 알아보기](https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/toggle)
 
 - h1의 classList에 특정 class가 이미 있는지 확인한다.
 - 만약 있다면 classList에 해당 class가 있다면 제거하고, 
@@ -51,9 +53,8 @@ function handleH1Click(){
 
 ```
 
-## [window event](https://developer.mozilla.org/ko/docs/Web/API/Window)
-
-
+## window event
+##### [event 더 알아보기](https://developer.mozilla.org/ko/docs/Web/API/Window)
 
 
 ## login - button
@@ -77,8 +78,8 @@ loginButton.addEventListener('click',function(){
 })
 ```
 
-## [Window.localStorage](https://developer.mozilla.org/ko/docs/Web/API/Window/localStorage)
-
+## Window.localStorage
+##### [local Storage 더 알아보기](https://developer.mozilla.org/ko/docs/Web/API/Window/localStorage)
 ### 1. Login
 ```js
 const loginFormEl=document.querySelector('#login-Form')
@@ -132,3 +133,119 @@ if (savedUsername===null){
 }
 
 ```
+
+
+## Interval - setInterval
+
+- '매번' 일어나야 하는 무언가를 위해 사용
+- 예를 들어 '매 2초' 는 무언가 할 때 2초마다 일어나게 하는 것을 의미한다.
+
+### setInterval
+
+##### [setInterval 더 알아보기](https://developer.mozilla.org/en-US/docs/Web/API/setInterval)
+
+- `setInterval(실행하고자 하는 함수, ms)`
+
+```js
+// setInterval(실행하고자 하는 fuction,호출되는 function의 간격 (ms) )
+// sayHello 함수를 5초마다 실행
+setInterval(sayHello,5000)
+
+```
+
+## Timeout - setTimeout
+
+### setTimeout
+
+##### [setTimeout 더 알아보기](https://developer.mozilla.org/ko/docs/Web/API/setTimeout)
+
+- `setTimeout(실행하고자 하는 함수, ms)
+
+```js
+const clockEl = document.querySelector('h2#clock')
+
+function sayHello(){
+  // Interval
+  // 2초마다 실행 - 내장 메서드 활용
+  console.log('hello')
+}
+
+// setTimeout(실행하고자 하는 fuction,호출되는 function의 간격 (ms)후 실행종료)
+// sayHello 함수를 5초 뒤에 실행 후 종료
+setTimeout(sayHello, 5000)
+```
+
+## Date Object
+
+##### [Date 더 알아보기](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Date)
+
+#### `Date()`
+- 함수로 호출할 경우 `new Date().toString()` 과 동일하게 현재 시간을 나타내는 문자열을 반환한다.
+
+#### `new Date()`
+- 생성자로 호출할 겨웅 새로운 `Date` 객체를 반환한다.
+
+```js
+const date = new Date()
+```
+
+### Date의 인스턴스 메서드
+
+- `Date.prototype.getDate()`
+- `Date.prototype.getDay()`
+- `Date.prototype.getFullYear()`
+- `Date.prototype.getHours()` 
+등
+
+
+## 시계를 만드는 함수
+
+### padStart()
+
+##### [padStart() 더 알아보기](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String/padStart)
+
+- `padStart(string의 길이, "추가할 문자")`
+
+```js
+console.log("1".padStart(2,"0")) // 01
+console.log("12".padStart(2,"0")) // 12
+
+```
+
+### padEnd()
+
+##### [padEnd() 더 알아보기](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String/padEnd)
+
+```js
+console.log("1".padEnd(2,"0")) // 10
+console.log("12".padEnd(2,"0")) // 12
+```
+
+### 시계 함수
+```js
+const clockEl = document.querySelector('h2#clock')
+
+function getClock(){
+  // Date Object : 현재 날짜랑 시간을 알려준다. 
+  const date = new Date()
+  const hours = String(date.getHours()).padStart(2,"0");
+  const minutes =  String(date.getMinutes()).padStart(2,"0")
+  const seconds =  String(date.getSeconds()).padStart(2,"0")
+  clockEl.innerText = (`${hours} : ${minutes} : ${seconds}`)
+}
+
+getClock()
+// 매초 단위로 반복 실행
+setInterval(getClock,1000)
+
+```
+
+## Math.module()
+
+### random()
+```js
+Math.floor(Math.random()*10)
+```
+### round()
+
+### ceil()

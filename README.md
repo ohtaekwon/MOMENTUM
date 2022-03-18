@@ -334,3 +334,15 @@ authorEl.innerText = todaysQuote.author;
 
 
 ## todo
+
+
+
+
+## openwathermap API
+
+##### [더 알아보기](https://openweathermap.org/)
+
+
+## fetch
+
+- url로 이동

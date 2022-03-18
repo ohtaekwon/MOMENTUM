@@ -11,11 +11,19 @@
   <script defer src="./js/clock.js"></script>
   <!-- QUOTES JS -->
   <script defer src="./js/quotes.js"></script>
+  <!-- BACKGROUND JS -->
+  <script defer src="./js/background.js"></script>
+  <!-- TODO JS -->
+  <script defer src="./js/todo.js"></script>
+  
   <!-- SYLTE CSS --> 
   <link rel="stylesheet" href="./css/style.css"/>
-
 </head>
 <body>
+  <!-- CLOCK -->
+  <h2 id="clock">00:00:00</h2>
+  
+  <!-- LOGIN -->
   <form class='hidden' id="login-Form">
     <input 
       required maxlength="11" 
@@ -23,13 +31,18 @@
       placeholder="What is your name?"
     />
     <input type="submit" value="Log In" />
-    <!-- <button>Log In</button> -->
   </form>
-  <h2 id="clock">00:00:00</h2>
-  <h1 class='hidden' id="greeting" class="hidden"></h1>
+  <h1 class='hidden' id="greeting"></h1>
+  <!-- TODO -->
+  <form id="todo-form">
+    <input type="text" placeholder="Write a To Do and Press Enter">
+  </form>
+
+  <!-- QUOTE -->
   <div id="quote">
     <span></span>
     <span></span>
   </div>
+  
 </body>
 </html>

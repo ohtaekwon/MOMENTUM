@@ -47,6 +47,3 @@ const todaysQuote = quotes[Math.floor(Math.random()*quotes.length)]
 
 quoteEl.innerText = todaysQuote.quote;
 authorEl.innerText = todaysQuote.author;
-// console.log(todaysQuote.quote)
-// console.log(todaysQuote.author)
-// console.log(quotes)

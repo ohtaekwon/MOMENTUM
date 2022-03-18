@@ -80,6 +80,11 @@ loginButton.addEventListener('click',function(){
 
 ## Window.localStorage
 ##### [local Storage 더 알아보기](https://developer.mozilla.org/ko/docs/Web/API/Window/localStorage)
+
+- localStorage에는 array는 저장할 수 없다.
+- 오직, text형태만 저장할 수 있다.
+- array를 저장하기 위해서는 형변환 시킨다.
+
 ### 1. Login
 ```js
 const loginFormEl=document.querySelector('#login-Form')

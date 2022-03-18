@@ -324,3 +324,8 @@ quoteEl.innerText = todaysQuote.quote;
 authorEl.innerText = todaysQuote.author;
 
 ```
+
+## 배경이미지
+
+
+## todo

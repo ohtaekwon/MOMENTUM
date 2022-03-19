@@ -37,6 +37,7 @@ function paintToDo(newTodo){
   const liEl = document.createElement("li"); // li 엘리멘트 생성
 
   liEl.id=newTodo.id // 9-2. li 엘리먼트의 id 값을 newTodo id값으로 할당한다.
+  
   const spanEl = document.createElement("span"); // span 엘리멘트 생성
   spanEl.innerText=newTodo.text;   // span 태그 안에 입력받은 문자 추가
   const buttonEl = document.createElement("button") // 버튼타입 생성

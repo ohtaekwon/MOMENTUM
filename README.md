@@ -336,6 +336,14 @@ authorEl.innerText = todaysQuote.author;
 ## todo
 
 
+## Geolocation.getCurrentPosition()
+
+[더 알아보기](https://developer.mozilla.org/ko/docs/Web/API/Geolocation/getCurrentPosition)
+
+- `Geolocation.getCurrentPosition()` 메서드는 장치의 현재 위치를 가져옵니다.
+- `navigator.geolocation.getCurrentPosition(success, error, [options])` 형태의 구문을 사용한다.
+
+
 
 
 ## openwathermap API
@@ -345,4 +353,22 @@ authorEl.innerText = todaysQuote.author;
 
 ## fetch
 
-- url로 이동
+[더 알아보기](https://developer.mozilla.org/ko/docs/Web/API/Fetch_API/Using_Fetch)
+
+- url로 이동한다.
+- Fetch API를 이용하면 Request나 Response와 같은 HTTP의 파이프라인을 구성하는 요소를 조작하는것이 가능합니다. 또한 fetch() (en-US) 메서드를 이용하는 것으로 비동기 네트워크 통신을 알기쉽게 기술할 수 있습니다.
+
+### 사용법
+
+- fetch() 함수는 첫번째 인자로 URL, 두번째 인자로 옵션 객체를 받고, Promise 타입의 객체를 반환합니다. 반환된 객체는, API 호출이 성공했을 경우에는 응답(response) 객체를 resolve하고, 실패했을 경우에는 예외(error) 객체를 reject합니다.
+
+```js
+fetch('http://example.com/movies.json')
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(myJson) {
+    console.log(JSON.stringify(myJson));
+  });
+
+```

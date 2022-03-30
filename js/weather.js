@@ -6,6 +6,9 @@ const API_KEY = "a683cc8e8af0ccbc8553b9ef8b12f14f"
 function onGeoOk(position){
   const lat = position.coords.latitude;
   const lon = position.coords.longitude;
+  // 나의 좌표
+  // console.log(lat)
+  // console.log(lon)
   // 3-1.
   const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`
   fetch(url).then(reponse =>reponse.json()).then(data=>{
@@ -25,3 +28,4 @@ function onGeoError(){
 }
 // 1. getCurrentPosition(실행 될 함수, 에러가 발생했을 떄 함수)
 navigator.geolocation.getCurrentPosition(onGeoOk,onGeoError)
+
